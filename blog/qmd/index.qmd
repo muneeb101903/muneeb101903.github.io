@@ -1,0 +1,116 @@
+---
+title: ".qmd and python jupyter blocks"
+date: 2024-2-20
+description: description
+categories: ['filter1', 'filter2']
+draft: false # Change to true to not render the post in on the website
+execute:
+    freeze: false
+---
+
+# What are qmd files?
+
+`.qmd` files are files special to quarto. The short version of it is that quarto renders these files, which are essentially markdown files, to jupyter notebooks, where it then executes and renders any python code. 
+
+# Examples
+
+```{python}
+print("Hello World!")
+
+print(3 + 2)
+```
+
+
+Quarto is designed for data science, and this means having executable code blocks that do something. For example, [Quarto can use matplotlib in python to plot things](https://quarto.org/docs/computations/python.html). 
+
+
+
+Where things get interesting is the combination of three factors:
+
+* The output of these code blocks can be done as plain text, rather than a code block, by putting `#| output: asis` at the beginning of the code block.
+* The plain text output by these code blocks, is done _before_ the markdown is rendered to other formats.
+* It's possible to hide the code blocks but not the output, by putting `#| echo: false` at the beginning of the code block itself
+
+What this means, is that python can essentially act as a formatting engine, for generating dynamic content. Even things like using. 
+
+```{.python}
+#| output: asis
+#| echo: false
+
+def make_bullets(list):
+  bulletlist = f''''''
+  for i in list:
+    bulletlist = bulletlist + "* "
+    bulletlist = bulletlist + i
+    bulletlist = bulletlist + "\n"
+  print(bulletlist)
+
+sample_list = [
+  "Item 1",
+  "Item 2",
+  "Item 3"
+]
+
+make_bullets(sample_list)
+```
+
+Which renders to:
+
+```{python}
+#| output: asis
+#| echo: false
+
+def make_bullets(list):
+  bulletlist = f''''''
+  for i in list:
+    bulletlist = bulletlist + "* "
+    bulletlist = bulletlist + i
+    bulletlist = bulletlist + "\n"
+  print(bulletlist)
+
+sample_list = [
+  "Item 1",
+  "Item 2",
+  "Item 3"
+]
+
+make_bullets(sample_list)
+```
+
+
+It should be noted that I am actually using two code blocks here, one which does not execute, and does not hide itself, and another which executes and hides itself.
+
+You can get even more dynamic content, if you use something like python requests to pull it as you render the site. Again, it is a bit hacky since backticks would render into a code block, so here I multiply one backticks times 3 to get a string containing 3 backticks, but it does work.
+
+```{.python}
+#| output: asis
+#| echo: false
+
+import requests
+backticks = "`" * 3
+
+print(f'''
+
+{backticks}{{.nix .code-overflow-wrap filename=home.nix}}
+{requests.get('https://raw.githubusercontent.com/ErikMcClure/bad-licenses/3c26bef3028fa8470308c493af7d7eae152a19ba/overwatch').text}
+{backticks}
+
+''')
+```
+
+
+```{python}
+#| output: asis
+#| echo: false
+
+import requests
+backticks = "`" * 3
+
+print(f'''
+
+{backticks}{{.nix .code-overflow-wrap filename=home.nix}}
+{requests.get('https://raw.githubusercontent.com/ErikMcClure/bad-licenses/3c26bef3028fa8470308c493af7d7eae152a19ba/overwatch').text}
+{backticks}
+
+''')
+```

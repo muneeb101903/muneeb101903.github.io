@@ -1,0 +1,6 @@
+jupyter-core
+pyyaml
+nbformat
+nbclient
+ipykernel
+requests
