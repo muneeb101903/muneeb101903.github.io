@@ -56,6 +56,13 @@
     "text": "What are qmd files?\n.qmd files are files special to quarto. The short version of it is that quarto renders these files, which are essentially markdown files, to jupyter notebooks, where it then executes and renders any python code.\n\n\nExamples\n\nprint(\"Hello World!\")\n\nprint(3 + 2)\n\nHello World!\n5\n\n\nQuarto is designed for data science, and this means having executable code blocks that do something. For example, Quarto can use matplotlib in python to plot things.\nWhere things get interesting is the combination of three factors:\n\nThe output of these code blocks can be done as plain text, rather than a code block, by putting #| output: asis at the beginning of the code block.\nThe plain text output by these code blocks, is done before the markdown is rendered to other formats.\nIt’s possible to hide the code blocks but not the output, by putting #| echo: false at the beginning of the code block itself\n\nWhat this means, is that python can essentially act as a formatting engine, for generating dynamic content. Even things like using.\n#| output: asis\n#| echo: false\n\ndef make_bullets(list):\n  bulletlist = f''''''\n  for i in list:\n    bulletlist = bulletlist + \"* \"\n    bulletlist = bulletlist + i\n    bulletlist = bulletlist + \"\\n\"\n  print(bulletlist)\n\nsample_list = [\n  \"Item 1\",\n  \"Item 2\",\n  \"Item 3\"\n]\n\nmake_bullets(sample_list)\nWhich renders to:\n\nItem 1\nItem 2\nItem 3\n\nIt should be noted that I am actually using two code blocks here, one which does not execute, and does not hide itself, and another which executes and hides itself.\nYou can get even more dynamic content, if you use something like python requests to pull it as you render the site. Again, it is a bit hacky since backticks would render into a code block, so here I multiply one backticks times 3 to get a string containing 3 backticks, but it does work.\n#| output: asis\n#| echo: false\n\nimport requests\nbackticks = \"`\" * 3\n\nprint(f'''\n\n{backticks}{{.nix .code-overflow-wrap filename=home.nix}}\n{requests.get('https://raw.githubusercontent.com/ErikMcClure/bad-licenses/3c26bef3028fa8470308c493af7d7eae152a19ba/overwatch').text}\n{backticks}\n\n''')\n\n\nhome.nix\n\n                     Overwatch License Revision 2\n                          (c) Author, year\n\n\nPermission is hereby granted, free of charge, for anyone to use, distribute, or\nsell the compiled binaries, source code, and documentation (the \"Software\")\nwithout attribution.\n\nPermission to modify the Software is only granted to those that have a higher\ncompetitive matchmaking rank than the copyright holder in Overwatch 2\n(Blizzard, 2022).\n\nThe Software is provided in the hope that some will find it useful, but the\nSoftware comes under NO WARRANTY, EXPRESS OR IMPLIED, and the authors of the\nSoftware are NOT LIABLE IN THE EVENT OF LOSSES, DAMAGES OR MISUSE relating to\nthe Software."
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Markdown formatting\n\n\n\nfilter2\n\nfilter3\n\n\n\ndescription\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n.qmd and python jupyter blocks\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Quarto\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Muhammad Kamal",
@@ -63,11 +70,11 @@
     "text": "This is a my personal blog.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "blog/RocketChat/test.html",
+    "href": "blog/RocketChat/test.html",
+    "title": "Title Here",
     "section": "",
-    "text": "Markdown formatting\n\n\n\nfilter2\n\nfilter3\n\n\n\ndescription\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n.qmd and python jupyter blocks\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Quarto\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\nNo matching items"
+    "text": "test"
   },
   {
     "objectID": "blog/quarto/index.html",
