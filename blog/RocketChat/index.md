@@ -6,6 +6,37 @@ categories: [Tutorials]
 draft: false # Change to true to not render the post in on the website
 ---
 
+What's RocketChat?
+
+Rocket.Chat is a chat server you can run on your own machine or server that allows:
+
+Real-time messaging (channels, private DMs)
+
+File sharing
+
+Video/audio calls (with add-ons)
+
+Notifications
+
+Admin control
+
+Integration with other tools
+
+Similar to Slack, Microsoft Teams and Discord
+
+Why should you use RocketChat?
+
+You should consider using Rocket.Chat if you want secure, customizable, team-based communication software that you fully control — without the vendor lock-in or data privacy concerns of tools like Slack, Discord, or Microsoft Teams.
+
+For example it has:
+1. Full Data Ownership and Privacy
+2. Highly Customizable
+3. Integration with your Tools
+4. Multi-Platform Access
+5. No Vendor Lock-in or Monthly Fees
+6. Great for Learning and IT Practice
+
+
 In order to deploy RocketChat on Debian with Docker you need to first update your machine
 <pre>sudo apt-get update</pre>
 
