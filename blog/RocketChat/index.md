@@ -6,7 +6,7 @@ categories: [Tutorials]
 draft: false # Change to true to not render the post in on the website
 ---
 
-What's RocketChat?
+<h3>**What's RocketChat?**</h3>
 
 Rocket.Chat is a chat server you can run on your own machine or server that allows:
 
@@ -24,7 +24,7 @@ Integration with other tools
 
 Similar to Slack, Microsoft Teams and Discord
 
-Why should you use RocketChat?
+<h3>**Why should you use RocketChat?**</h3>
 
 You should consider using Rocket.Chat if you want secure, customizable, team-based communication software that you fully control — without the vendor lock-in or data privacy concerns of tools like Slack, Discord, or Microsoft Teams.
 
