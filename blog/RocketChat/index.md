@@ -36,7 +36,7 @@ Now that you have Docker installed and setup, you need Deploy RocketChat
 First you are going to need to create a directory for RocketChat
 <pre>mkdir rocketchat-deploy && cd rocketchat-deploy</pre>
 
-Next create a <pre>docker-compose.yml</pre> file
+Next create a YAML file
 <pre>vim docker-compose.yml</pre>
 
 Afterwards paste the following content into the YAML file:
