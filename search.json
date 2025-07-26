@@ -70,6 +70,13 @@
     "text": "This is a my personal blog.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "blog/RocketChat/index.html",
+    "href": "blog/RocketChat/index.html",
+    "title": "Debian RocketChat Deployment",
+    "section": "",
+    "text": "In order to deploy RocketChat on Debian with Docker you need to first update your machine\n'''sudo apt-get update'''\nThen install the Docker application\n'''sudo apt-get install docker'''\nAfterwards install the required packages for docker\n'''sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release'''\nNext add Docker’s official GPG Key\n'''curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg'''"
+  },
+  {
     "objectID": "blog/quarto/index.html",
     "href": "blog/quarto/index.html",
     "title": "About Quarto",
