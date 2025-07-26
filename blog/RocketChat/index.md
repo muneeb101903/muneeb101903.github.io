@@ -28,14 +28,15 @@ Similar to Slack, Microsoft Teams and Discord
 
 You should consider using Rocket.Chat if you want secure, customizable, team-based communication software that you fully control — without the vendor lock-in or data privacy concerns of tools like Slack, Discord, or Microsoft Teams.
 
-For example it has:
-1. Full Data Ownership and Privacy
-2. Highly Customizable
-3. Integration with your Tools
-4. Multi-Platform Access
-5. No Vendor Lock-in or Monthly Fees
-6. Great for Learning and IT Practice
+For example it has:<br>
+1. Full Data Ownership and Privacy<br>
+2. Highly Customizable<br>
+3. Integration with your Tools<br>
+4. Multi-Platform Access<br>
+5. No Vendor Lock-in or Monthly Fees<br>
+6. Great for Learning and IT Practice<br>
 
+<h3>**The Steps**</h3>
 
 In order to deploy RocketChat on Debian with Docker you need to first update your machine
 <pre>sudo apt-get update</pre>
