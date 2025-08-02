@@ -49,6 +49,13 @@
     "text": "Code Blocks\nIt’s possible to do code blocks with langauge highlighting.\nThis:\n\\`\\`\\`{.python}\nprint(\"hellow world!\")\n\ndef testfunction(input):\n    print(\"Hi!\")\n\\`\\`\\`\nResults in:\nprint(\"hellow world!\")\n\ndef testfunction(input):\n    print(\"Hi!\")\nMany, many languages are supported and can be highlighted.\nImages:\n![alt text](https://quarto.org/quarto.png)\n\n\n\nalt text\n\n\nOf course, this is an external image. You an also store images in the repository, and then refer to them by the relative file path. Something like:\n![](../image.png)\nWhere .. goes up one directory, and then you can refer to files by their file path.\nMore information about markdown: https://quarto.org/docs/authoring/markdown-basics.html"
   },
   {
+    "objectID": "blog/Caddy/index.html",
+    "href": "blog/Caddy/index.html",
+    "title": "Debian WordPress Deployment",
+    "section": "",
+    "text": "What Is WordPress"
+  },
+  {
     "objectID": "blog/RocketChat/index.html",
     "href": "blog/RocketChat/index.html",
     "title": "Debian RocketChat Deployment",
@@ -67,7 +74,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Deploying WordPress with Caddy on Debian\n\n\n\nTutorials\n\n\n\nThis guide will teach you how you can deploy WordPress with Caddy on Debian Linux\n\n\n\n\n\nAug 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDebian RocketChat Deployment\n\n\n\nTutorials\n\n\n\nThis guide will help deploy RocketChat on Debian with Docker\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown formatting\n\n\n\nfilter2\n\nfilter3\n\n\n\ndescription\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n.qmd and python jupyter blocks\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Quarto\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\nNo matching items"
+    "text": "Debian WordPress Deployment\n\n\n\nTutorials\n\n\n\nThis guide will help deploy WordPress on Debian with Caddy\n\n\n\n\n\nAug 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDebian RocketChat Deployment\n\n\n\nTutorials\n\n\n\nThis guide will help deploy RocketChat on Debian with Docker\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMarkdown formatting\n\n\n\nfilter2\n\nfilter3\n\n\n\ndescription\n\n\n\n\n\nFeb 23, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n.qmd and python jupyter blocks\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAbout Quarto\n\n\n\nfilter1\n\nfilter2\n\n\n\ndescription\n\n\n\n\n\nFeb 20, 2024\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/qmd/index.html",
