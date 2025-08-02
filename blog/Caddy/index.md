@@ -32,7 +32,7 @@ What You Can Do with WordPress:
 
 In order to deploy WordPress through Caddy on Debian you are going to need to do the following:
 
-Instal PHP and Required Extensions
+**Install PHP and Required Extensions**
 <pre>sudo apt update
 sudo apt install php php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip unzip curl -y
 </pre>
