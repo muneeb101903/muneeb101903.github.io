@@ -95,3 +95,6 @@ Configure Caddy and Edit /etc/caddy/Caddyfile
 }
 </pre>
 
+Then reload Caddy
+
+<pre>sudo systemctl reload caddy</pre>
