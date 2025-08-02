@@ -2,6 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/Caddy/index.html",
       "/blog/RocketChat/index.html",
       "/blog/markdown/index.html",
       "/blog/qmd/index.html",
