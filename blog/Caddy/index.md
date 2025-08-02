@@ -98,3 +98,22 @@ Configure Caddy and Edit /etc/caddy/Caddyfile
 Then reload Caddy
 
 <pre>sudo systemctl reload caddy</pre>
+
+Wait a moment for it to start up
+And there you go. You have successfully deployed WordPress with Caddy on Debian.
+
+You can test to see if it works in another virtual machine
+In this case we are using Kali Linux
+
+First we need to make sure both the Debian and Kali machines are talking with each other
+
+To do so we allow Kali to reach Debians Port 80
+<pre>sudo ufw allow 80</pre>
+
+Next do a PING test
+<pre>ping 10.70.36.176</pre>
+
+Finally on your Kali machine open a browser and type your IP address in this format
+<pre>http://00.00.00.000</pre>
+
+If you see the installation page for WordPress you have successfully tested the deployment of Wordpress through Caddy on Kali.
