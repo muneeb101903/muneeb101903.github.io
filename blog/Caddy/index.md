@@ -32,17 +32,17 @@ What You Can Do with WordPress:
 
 In order to deploy WordPress through Caddy on Debian you are going to need to do the following:
 
-**Install PHP and Required Extensions**
+**1. Install PHP and Required Extensions**
 <pre>sudo apt update
 sudo apt install php php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip unzip curl -y
 </pre>
 
-Install Docker 
+**2. Install Docker**
 <pre>sudo apt-get install docker
 sudo systemctl enable docker --now
 </pre>
 
-Start MariaDB in a container
+**3. Start MariaDB in a container**
 <pre>
 docker run -d \
   --name wordpress-db \
@@ -54,7 +54,7 @@ docker run -d \
   mariadb:latest
 </pre>
 
-Install Caddy Web Server
+**4. Install Caddy Web Server**
 <pre>
 sudo apt install -y debian-keyring debian-archive-keyring curl
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
@@ -63,7 +63,7 @@ sudo apt update
 sudo apt install caddy
 </pre>
 
-Download and Configure WordPress
+**5. Download and Configure WordPress**
 <pre>
 cd /var/www/
 sudo curl -O https://wordpress.org/latest.tar.gz
@@ -72,12 +72,12 @@ sudo chown -R www-data:www-data wordpress
 sudo chmod -R 755 wordpress
 </pre>
 
-Copy Sample config
+**6. Copy Sample config**
 <pre>cd wordpress
 cp wp-config-sample.php wp-config.php
 </pre>
 
-Edit wp-config.php
+**7. Edit wp-config.php**
 <pre>
 define( 'DB_NAME', 'wordpress' );
 define( 'DB_USER', 'wpuser' );
@@ -85,7 +85,7 @@ define( 'DB_PASSWORD', 'wppassword' );
 define( 'DB_HOST', '127.0.0.1:3306' ); // Docker container exposes this
 </pre>
 
-Configure Caddy and Edit /etc/caddy/Caddyfile
+**8. Configure Caddy and Edit /etc/caddy/Caddyfile**
 <pre>
 :80 {
     root * /var/www/wordpress
@@ -95,8 +95,7 @@ Configure Caddy and Edit /etc/caddy/Caddyfile
 }
 </pre>
 
-Then reload Caddy
-
+**9. Then reload Caddy**
 <pre>sudo systemctl reload caddy</pre>
 
 Wait a moment for it to start up
@@ -107,13 +106,13 @@ In this case we are using Kali Linux
 
 First we need to make sure both the Debian and Kali machines are talking with each other
 
-To do so we allow Kali to reach Debians Port 80
+**To do so we allow Kali to reach Debians Port 80**
 <pre>sudo ufw allow 80</pre>
 
-Next do a PING test
+**Next do a PING test**
 <pre>ping 10.70.36.176</pre>
 
-Finally on your Kali machine open a browser and type your IP address in this format
+**Finally on your Kali machine open a browser and type your IP address in this format**
 <pre>http://00.00.00.000</pre>
 
 If you see the installation page for WordPress you have successfully tested the deployment of Wordpress through Caddy on Kali.
