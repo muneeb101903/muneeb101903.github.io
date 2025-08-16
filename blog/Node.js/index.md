@@ -1,5 +1,5 @@
 ---
-title: "Deploying Node.js through Kubernetes on Debian"
+title: "Debian Node.js Deployment"
 listing:
   contents:
     - "*/index.*md"
