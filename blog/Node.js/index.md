@@ -215,7 +215,7 @@ kubectl delete -f nodejs-hello.yaml
 kubectl get nodes -o wide
 </pre>
 
-
+That is the way to deploy Node.js on Debian with Kubernetes.
 
 
 
